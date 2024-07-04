@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import axios from 'axios';
 
 const variants = {
   initial: {
@@ -26,24 +26,25 @@ const Contact = () => {
 
   const isInView = useInView(ref, { margin: "-100px" });
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
+    window.location.reload();
+
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
-        formRef.current,
-        "pX_2hasGmGcuvjXIW"
-      )
-      .then(
-        (result) => {
-          setSuccess(true)
-        },
-        (error) => {
-          setError(true);
-        }
-      );
+    const formData = new FormData(formRef.current);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    };
+
+    try {
+      await axios.post('http://localhost:3001/send-email', data);
+      setSuccess(true);
+    } catch (error) {
+      console.log(error);
+      setError(true);
+    }
   };
 
   return (
@@ -58,15 +59,15 @@ const Contact = () => {
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <span>himanshuwork3304@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <span>young st</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          <span>+1 204 869 8267</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">
@@ -110,8 +111,6 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email"/>
           <textarea rows={8} placeholder="Message" name="message"/>
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
         </motion.form>
       </div>
     </motion.div>

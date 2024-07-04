@@ -36,8 +36,8 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <p>
-          I focus on helping your brand grow
-          <br /> and move forward
+          I focus on providing customized
+          <br /> web apps to businesses
         </p>
         <hr />
       </motion.div>
@@ -45,14 +45,13 @@ const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{color:"orange"}}>Unique</motion.b> Ideas
+            <motion.b whileHover={{color:"orange"}}>Costumized</motion.b> Web Applications
           </h1>
         </div>
         <div className="title">
           <h1>
             <motion.b whileHover={{color:"orange"}}>For Your</motion.b> Business.
           </h1>
-          <button>WHAT WE DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -60,52 +59,55 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Ecommerce Stores</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I create customized ecommerce stores tailored to your business needs,
+            ensuring a seamless shopping experience for your customers. 
+            From intuitive navigation to secure payment processing, my 
+            ecommerce solutions help drive sales and enhance customer satisfaction.
           </p>
+
           <button>Go</button>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Staffing Application</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I develop robust staffing applications designed to streamline recruitment
+            processes and manage workforce efficiently. My solutions offer 
+            features like job postings, candidate tracking, interview scheduling, 
+            and performance analytics to help businesses find and retain top talent.
           </p>
+
           <button>Go</button>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>CMS</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I specialize in creating and customizing Content Management Systems (CMS) 
+            that allow you to easily manage and update your website content. 
+            My solutions are user-friendly, scalable, and tailored to your specific needs, 
+            enabling efficient content organization and publishing.
           </p>
           <button>Go</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Branding</h2>
+          </motion.div>
+          <motion.div
+            className="box"
+            whileHover={{ background: "lightgray", color: "black" }}
+          >
+          <h2>Anything</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            libero enim nisi aliquam consectetur expedita magni eius ex corrupti
-            animi! Ad nam pariatur assumenda quae mollitia libero repellat
-            explicabo maiores?
+            I provide flexible and comprehensive solutions for any of your digital needs, 
+            whether it’s developing a unique web application, 
+            optimizing your existing system, or consulting on best practices. 
+            My expertise ensures your project is handled with professionalism and innovation.
           </p>
+
           <button>Go</button>
         </motion.div>
       </motion.div>
